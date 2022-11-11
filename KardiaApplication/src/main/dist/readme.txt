@@ -1,5 +1,5 @@
-TravelKilometres App
-====================
+Kardia App
+==========
 
 Setup
 -----

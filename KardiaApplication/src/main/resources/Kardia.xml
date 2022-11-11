@@ -97,9 +97,28 @@
 	<reading datetime="25/09/2022 08:03" rate="88" result="PAF" />
 	<reading datetime="26/09/2022 10:20" rate="86" result="PAF" />
 	<reading datetime="27/09/2022 13:22" rate="103" result="PAF" />
+	<reading datetime="28/09/2022 08:12" rate="101" result="PAF" />
+	<reading datetime="28/09/2022 21:09" rate="129" result="PAF" />
+	<reading datetime="30/09/2022 09:22" rate="104" result="PAF" />
+	<reading datetime="01/10/2022 09:20" rate="87" result="PAF" />
+	<reading datetime="01/10/2022 22:29" rate="89" result="PAF" />
+	<reading datetime="02/10/2022 07:56" rate="131" result="PAF" />
+	<reading datetime="03/10/2022 09:38" rate="88" result="PAF" />
+	<reading datetime="04/10/2022 10:08" rate="138" result="PAF" />
+	<reading datetime="05/10/2022 11:42" rate="94" result="PAF" />
+	<reading datetime="06/10/2022 14:32" rate="100" result="PAF" />
+	<reading datetime="07/10/2022 08:09" rate="100" result="PAF" />
+	<reading datetime="08/10/2022 08:18" rate="92" result="PAF" />
+	<reading datetime="10/10/2022 08:59" rate="88" result="PAF" />
+	
 	<medication name="Low dose Asprin." start="12/06/2022" end="26/09/2022" />
-	<medication name="Tensig-Atenolol 25mg (half tablet)." start="23/09/2022" end="" />
+	<medication name="Tensig-atenolol 25mg (half tablet)." start="23/09/2022" end="05/10/2022" />
 	<medication name="Low dose Asprin (twice daily)." start="27/09/2022" end="28/09/2022" />
-	<medication name="Eliquis-Apixaban 5mg (2 in AM, 2 in PM)." start="28/09/2022" end="" />
-	<symptom name="Left leg calf strain. Possible DVT." result="Confirmed 28/9/2022. 10-15cm." start="26/09/2022" end="" />
+	<medication name="Eliquis-apixaban 20mg (2 in AM, 2 in PM)." start="28/09/2022" end="04/10/2022" />
+	<medication name="Eliquis-apixaban 10mg (1 in AM, 1 in PM)." start="05/10/2022" end="" />
+	<medication name="Tensig-atenolol 50mg (0.5 in AM, 0.5 in PM)." start="06/10/2022" end="" />
+	
+	<symptom name="Left leg calf pain. Possible DVT." result="Confirmed DVT, 28/9/2022. 10-15cm." start="26/09/2022" end="30/09/2022" />
+	<symptom name="While taking short walks (3-6kms), feeling lethargic, short of breathe." start="30/09/2022" end="" />
+	<symptom name="Light headed after bending down." start="30/09/2022" end="" />
 </kardia>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Appenders>
+    <Console name="Console" target="">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} %msg%n" />
+    </Console>
+    <File name="File" fileName="Kardia.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} %msg%n" />
+    </File>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.wadhams.kardia.app" level="DEBUG" additivity="false">
+      <AppenderRef ref="Console" />
+    </Logger>
+    <Root level="ERROR">
+      <AppenderRef ref="Console" />
+    </Root>
+  </Loggers>
+</Configuration>
