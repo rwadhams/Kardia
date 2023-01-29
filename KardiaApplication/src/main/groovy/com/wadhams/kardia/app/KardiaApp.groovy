@@ -13,7 +13,7 @@ import com.wadhams.kardia.dto.KardiaMedication
 import com.wadhams.kardia.dto.KardiaReading
 import com.wadhams.kardia.dto.KardiaSymptom
 import com.wadhams.kardia.dto.ListRange
-
+import com.wadhams.kardia.dto.ReportingValues
 import groovy.util.logging.Log4j2
 
 @Log4j2 (value = 'logger')
@@ -29,13 +29,14 @@ class KardiaApp {
 	List<KardiaSymptom> ksList
 	List<KardiaEvent> keList
 	List<KardiaBackground> kbList
-	
-	long totalReportingPeriod	//days
+
+	ReportingValues reportingValues	
+//	long totalReportingPeriod	//days
 	
 	//blood pressure values
-	int numberOfBloodPressureReadings
-	KardiaBloodPressure maxBloodPressure
-	KardiaBloodPressure minBloodPressure
+//	int numberOfBloodPressureReadings
+//	KardiaBloodPressure maxBloodPressure
+//	KardiaBloodPressure minBloodPressure
 
 	static main(args) {
 		logger.info 'KardiaApp started...'
@@ -82,11 +83,9 @@ class KardiaApp {
 		keList = buildKardiaEventList(k.timeline.event)
 		logger.debug keList
 		
-		totalReportingPeriod = ChronoUnit.DAYS.between(krList[0].dateTime.toLocalDate(), krList[-1].dateTime.toLocalDate()) + 1
-		logger.debug "totalReportingPeriod: $totalReportingPeriod"
-
-		determineBloodPressureValues()	//size, max and min
-				
+		reportingValues = buildReportingValues()
+		logger.debug reportingValues
+		
 		File f1 = new File("out/kardia-report.txt")
 		f1.withPrintWriter {pw ->
 			reportTotalReportingPeriod(pw)
@@ -114,12 +113,12 @@ class KardiaApp {
 	}
 	
 	def reportTotalReportingPeriod(PrintWriter pw) {
-		pw.println "Total reporting period: $totalReportingPeriod days."
+		pw.println "Total reporting period: ${reportingValues.totalReportingPeriod} days. Starting on ${reportingValues.reportingPeriodStartDate.format(df)}"
 		pw.println ''
 	}
 	
 	def reportTotalReportingPeriodHTML(PrintWriter pw) {
-		pw.println "<p>Total reporting period: $totalReportingPeriod days.</p>"
+		pw.println "<p>Total reporting period: ${reportingValues.totalReportingPeriod} days. Starting on ${reportingValues.reportingPeriodStartDate.format(df)}</p>"
 	}
 	
 	def reportReadings(PrintWriter pw) {
@@ -168,18 +167,18 @@ class KardiaApp {
 	}
 	
 	def reportBloodPressure(PrintWriter pw) {
-		pw.println "Number of Blood Pressure readings: $numberOfBloodPressureReadings"
-		pw.println "\tMin: ${minBloodPressure.dateTime.format(df)} (${minBloodPressure.systolic}/${minBloodPressure.diastolic})"
-		pw.println "\tMax: ${maxBloodPressure.dateTime.format(df)} (${maxBloodPressure.systolic}/${maxBloodPressure.diastolic})"
+		pw.println "Number of Blood Pressure readings: ${reportingValues.numberOfBloodPressureReadings}"
+		pw.println "\tMin: ${reportingValues.minBloodPressure.dateTime.format(df)} (${reportingValues.minBloodPressure.systolic}/${reportingValues.minBloodPressure.diastolic})"
+		pw.println "\tMax: ${reportingValues.maxBloodPressure.dateTime.format(df)} (${reportingValues.maxBloodPressure.systolic}/${reportingValues.maxBloodPressure.diastolic})"
 		pw.println ''
 	}
 	
 	def reportBloodPressureHTML(PrintWriter pw) {
 		pw.println '<b>Blood Pressure:</b>'
 		pw.println '<table border="1">'
-		pw.println "<tr><td>Number of Blood Pressure readings:</td><td>$numberOfBloodPressureReadings</td></tr>"
-		pw.println "<tr><td>Min read on ${minBloodPressure.dateTime.format(df)}</td><td>${minBloodPressure.systolic}/${minBloodPressure.diastolic}</td></tr>"
-		pw.println "<tr><td>Max read on ${maxBloodPressure.dateTime.format(df)}</td><td>${maxBloodPressure.systolic}/${maxBloodPressure.diastolic}</td></tr>"
+		pw.println "<tr><td>Number of Blood Pressure readings:</td><td>${reportingValues.numberOfBloodPressureReadings}</td></tr>"
+		pw.println "<tr><td>Min read on ${reportingValues.minBloodPressure.dateTime.format(df)}</td><td>${reportingValues.minBloodPressure.systolic}/${reportingValues.minBloodPressure.diastolic}</td></tr>"
+		pw.println "<tr><td>Max read on ${reportingValues.maxBloodPressure.dateTime.format(df)}</td><td>${reportingValues.maxBloodPressure.systolic}/${reportingValues.maxBloodPressure.diastolic}</td></tr>"
 		pw.println '</table>'
 	}
 	
@@ -432,21 +431,43 @@ class KardiaApp {
 		return kbList
 	}
 	
-	def determineBloodPressureValues() {
-		numberOfBloodPressureReadings = kbpList.size()
+	ReportingValues buildReportingValues() {
+		ReportingValues rv = new ReportingValues()
 		
-		maxBloodPressure = kbpList[0]
-		minBloodPressure = kbpList[0]
-		kbpList[1..-1].each {kr ->
-			if (kr.systolic > maxBloodPressure.systolic) {
-				maxBloodPressure = kr
+		rv.reportingPeriodStartDate = krList[0].dateTime.toLocalDate()
+		rv.totalReportingPeriod = ChronoUnit.DAYS.between(krList[0].dateTime.toLocalDate(), krList[-1].dateTime.toLocalDate()) + 1
+
+		rv.numberOfBloodPressureReadings = kbpList.size()
+		
+		rv.maxBloodPressure = kbpList[0]
+		rv.minBloodPressure = kbpList[0]
+		kbpList[1..-1].each {kbp ->
+			if (kbp.systolic > rv.maxBloodPressure.systolic) {
+				rv.maxBloodPressure = kbp
 			}
-			if (kr.systolic < minBloodPressure.systolic) {
-				minBloodPressure = kr
+			if (kbp.systolic < rv.minBloodPressure.systolic) {
+				rv.minBloodPressure = kbp
 			}
 		}
-		logger.debug "max bp: $maxBloodPressure"
-		logger.debug "min bp: $minBloodPressure"
+				
+		return rv
 	}
+	
+//	def determineBloodPressureValues() {
+//		numberOfBloodPressureReadings = kbpList.size()
+//		
+//		maxBloodPressure = kbpList[0]
+//		minBloodPressure = kbpList[0]
+//		kbpList[1..-1].each {kr ->
+//			if (kr.systolic > maxBloodPressure.systolic) {
+//				maxBloodPressure = kr
+//			}
+//			if (kr.systolic < minBloodPressure.systolic) {
+//				minBloodPressure = kr
+//			}
+//		}
+//		logger.debug "max bp: $maxBloodPressure"
+//		logger.debug "min bp: $minBloodPressure"
+//	}
 	
 }
