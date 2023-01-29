@@ -9,4 +9,8 @@ class KardiaReading {
 	LocalDateTime dateTime
 	int rate
 	String result
+	
+	//Blood pressure
+	int systolic
+	int diastolic
 }
