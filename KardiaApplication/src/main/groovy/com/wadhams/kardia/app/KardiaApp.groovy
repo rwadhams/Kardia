@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
 import com.wadhams.kardia.dto.Event
+import com.wadhams.kardia.dto.KardiaBackground
 import com.wadhams.kardia.dto.KardiaEvent
 import com.wadhams.kardia.dto.KardiaMedication
 import com.wadhams.kardia.dto.KardiaReading
@@ -25,7 +26,7 @@ class KardiaApp {
 	List<KardiaMedication> kmList
 	List<KardiaSymptom> ksList
 	List<KardiaEvent> keList
-	List<String> backgroundList
+	List<KardiaBackground> kbList
 	
 	long totalReportingPeriod	//days
 	
@@ -70,8 +71,8 @@ class KardiaApp {
 		ksList = buildKardiaSymptomList(k.symptom)
 		logger.debug ksList
 		
-		backgroundList = buildBackgroundList(k.timeline.background)
-		logger.debug backgroundList
+		kbList = buildBackgroundList(k.background)
+		logger.debug kbList
 		
 		keList = buildKardiaEventList(k.timeline.event)
 		logger.debug keList
@@ -235,7 +236,7 @@ class KardiaApp {
 	
 	def reportBackground(PrintWriter pw) {
 		pw.println 'Background:'
-		backgroundList.each {bg ->
+		kbList.each {bg ->
 			pw.println "\t$bg"
 		}
 		pw.println ''
@@ -244,7 +245,7 @@ class KardiaApp {
 	def reportBackgroundHTML(PrintWriter pw) {
 		pw.println '<b>Background:</b>'
 		pw.println '<table border="1">'
-		backgroundList.each {bg ->
+		kbList.each {bg ->
 			pw.println "<tr><td>$bg</td></tr>"
 		}
 		pw.println '</table>'
@@ -405,14 +406,14 @@ class KardiaApp {
 		return keList
 	}
 	
-	List<String> buildBackgroundList(background) {
-		List<String> bgList = []
+	List<KardiaBackground> buildBackgroundList(background) {
+		List<KardiaBackground> kbList = []
 		
 		background.desc.each {d ->
-			bgList << d
+			kbList << d
 		}
 		
-		return bgList
+		return kbList
 	}
 	
 	def determineBloodPressureValues() {

@@ -182,12 +182,13 @@
 	<symptom name="Light headed while driving. Low HR manually detected. Stopped to rest and recover. " start="01/12/2022" end="01/12/2022" />
 	<symptom name="Light headed while driving. Maybe pressure imbalance." start="09/12/2022" end="09/12/2022" />
 	
+	<background>
+		<desc>My name is Robert Wadhams. My wife's name is Molly Wadhams.</desc>
+		<desc>We have recently retired (June, 2019), sold our property in Brisbane and now live fulltime on the road as grey nomads. We are planning on driving a car and caravan all over Australia for as long as we can do it.</desc>
+		<desc>This lifestyle is wonderful and refreshing, but it does present issues when medical attention is required as we are not always in one location for an extended period of time. However, we will always make the necessary arrangements when seeking medical treatment.</desc>
+	</background>
+		
 	<timeline>
-		<background>
-			<desc>My name is Robert Wadhams. My wife's name is Molly Wadhams.</desc>
-			<desc>We have recently retired (June, 2019), sold our property in Brisbane and now live fulltime on the road as grey nomads. We are planning on driving a car and caravan all over Australia for as long as we can do it.</desc>
-			<desc>This lifestyle is wonderful and refreshing, but it does present issues when medical attention is required as we are not always in one location for an extended period of time. However, we will always make the necessary arrangements when seeking medical treatment.</desc>
-		</background>
 		<event eventDt="15/04/2022">
 			<desc>Arrived in America for overseas holiday. While dealing with jetlag and resting, I felt my heart rate was irregular. Confirmed by my wife.</desc>
 		</event>
