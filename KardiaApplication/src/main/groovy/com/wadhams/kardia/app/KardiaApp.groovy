@@ -7,6 +7,7 @@ import java.time.temporal.ChronoUnit
 
 import com.wadhams.kardia.dto.Event
 import com.wadhams.kardia.dto.KardiaBackground
+import com.wadhams.kardia.dto.KardiaBloodPressure
 import com.wadhams.kardia.dto.KardiaEvent
 import com.wadhams.kardia.dto.KardiaMedication
 import com.wadhams.kardia.dto.KardiaReading
@@ -22,6 +23,7 @@ class KardiaApp {
 	DateTimeFormatter dfOut = DateTimeFormatter.ofPattern('dd/LLL/yyyy')
 	
 	List<KardiaReading> krList
+	List<KardiaBloodPressure> kbpList
 	List<ListRange> listRangeList
 	List<KardiaMedication> kmList
 	List<KardiaSymptom> ksList
@@ -32,8 +34,8 @@ class KardiaApp {
 	
 	//blood pressure values
 	int numberOfBloodPressureReadings
-	KardiaReading maxBloodPressure
-	KardiaReading minBloodPressure
+	KardiaBloodPressure maxBloodPressure
+	KardiaBloodPressure minBloodPressure
 
 	static main(args) {
 		logger.info 'KardiaApp started...'
@@ -64,6 +66,9 @@ class KardiaApp {
 		
 		listRangeList = buildListRange()
 		logger.debug listRangeList
+		
+		kbpList = buildKardiaBloodPressureList(k.reading)
+		logger.debug kbpList
 		
 		kmList = buildKardiaMedicationList(k.medication)
 		logger.debug kmList
@@ -318,18 +323,29 @@ class KardiaApp {
 			String result = r.@result
 			KardiaReading kr = new KardiaReading(dateTime : dateTime, rate : Integer.parseInt(rate), result : result)
 
-			//Blood pressure is optional			
-			String systolic = r.@systolic
-			String diastolic = r.@diastolic
-			if (systolic && diastolic) {
-				kr.systolic = Integer.parseInt(systolic)
-				kr.diastolic = Integer.parseInt(diastolic)
-			}
-			
 			krList << kr
 		}
 		
 		return krList
+	}
+	
+	List<KardiaBloodPressure> buildKardiaBloodPressureList(readings) {
+		List<KardiaBloodPressure> kbpList = []
+		
+		readings.each {r ->
+			LocalDateTime dateTime = LocalDateTime.parse(r.@datetime.text(), dtf)
+
+			//Blood pressure is optional			
+			String systolic = r.@systolic
+			String diastolic = r.@diastolic
+			if (systolic && diastolic) {
+//				KardiaBloodPressure kbp = new KardiaBloodPressure(dateTime : dateTime, systolic : Integer.parseInt(systolic), diastolic : Integer.parseInt(diastolic))
+//				kbpList << kbp
+				kbpList << new KardiaBloodPressure(dateTime : dateTime, systolic : Integer.parseInt(systolic), diastolic : Integer.parseInt(diastolic))
+			}
+		}
+		
+		return kbpList
 	}
 	
 	List<KardiaMedication> buildKardiaMedicationList(medications) {
@@ -417,15 +433,11 @@ class KardiaApp {
 	}
 	
 	def determineBloodPressureValues() {
-		List<KardiaReading> bpList = krList.findAll {kr ->
-			kr.systolic > 0 && kr.diastolic > 0
-		}
-		logger.debug "bpList: $bpList"
-		numberOfBloodPressureReadings = bpList.size()
+		numberOfBloodPressureReadings = kbpList.size()
 		
-		maxBloodPressure = bpList[0]
-		minBloodPressure = bpList[0]
-		bpList[1..-1].each {kr ->
+		maxBloodPressure = kbpList[0]
+		minBloodPressure = kbpList[0]
+		kbpList[1..-1].each {kr ->
 			if (kr.systolic > maxBloodPressure.systolic) {
 				maxBloodPressure = kr
 			}

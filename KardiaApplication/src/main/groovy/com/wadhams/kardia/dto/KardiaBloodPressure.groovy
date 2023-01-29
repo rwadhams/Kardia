@@ -5,8 +5,8 @@ import java.time.LocalDateTime
 import groovy.transform.ToString
 
 @ToString
-class KardiaReading {
+class KardiaBloodPressure {
 	LocalDateTime dateTime
-	int rate
-	String result
+	int systolic
+	int diastolic
 }
