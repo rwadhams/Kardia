@@ -110,15 +110,173 @@
 	<reading datetime="07/10/2022 08:09" rate="100" result="PAF" />
 	<reading datetime="08/10/2022 08:18" rate="92" result="PAF" />
 	<reading datetime="10/10/2022 08:59" rate="88" result="PAF" />
+	<reading datetime="11/10/2022 11:58" rate="99" result="PAF" />
+	<reading datetime="13/10/2022 10:02" rate="96" result="PAF" />
+	<reading datetime="14/10/2022 08:45" rate="103" result="PAF" />
+	<reading datetime="15/10/2022 07:49" rate="91" result="PAF" />
+	<reading datetime="16/10/2022 09:00" rate="88" result="PAF" />
+	<reading datetime="17/10/2022 08:41" rate="98" result="PAF" />
+	<reading datetime="20/10/2022 09:51" rate="95" result="PAF" />
+	<reading datetime="21/10/2022 10:05" rate="93" result="PAF" />
+	<reading datetime="22/10/2022 08:42" rate="85" result="PAF" />
+	<reading datetime="23/10/2022 09:11" rate="89" result="PAF" />
+	<reading datetime="25/10/2022 10:19" rate="97" result="PAF" />
+	<reading datetime="28/10/2022 22:36" rate="102" result="PAF" />
+	<reading datetime="30/10/2022 10:42" rate="88" result="PAF" />
+	<reading datetime="01/11/2022 10:18" rate="91" result="PAF" />
+	<reading datetime="03/11/2022 09:33" rate="91" result="PAF" />
+	<reading datetime="04/11/2022 08:41" rate="87" result="PAF" />
+	<reading datetime="05/11/2022 07:47" rate="86" result="PAF" />
+	<reading datetime="07/11/2022 07:41" rate="92" result="PAF" />
+	<reading datetime="10/11/2022 09:14" rate="83" result="PAF" />
+	<reading datetime="11/11/2022 17:59" rate="89" result="PAF" />
+	<reading datetime="14/11/2022 07:34" rate="93" result="PAF" />
+	<reading datetime="19/11/2022 09:12" rate="88" result="PAF" />
+	<reading datetime="22/11/2022 09:12" rate="108" result="PAF" />
+	<reading datetime="24/11/2022 12:04" rate="86" result="PAF" />
+	<reading datetime="27/11/2022 08:31" rate="101" result="PAF" />
+	<reading datetime="30/11/2022 11:54" rate="81" result="PAF" />
+	<reading datetime="02/12/2022 11:22" rate="90" result="PAF" />
+	<reading datetime="05/12/2022 09:30" rate="124" result="PAF" />
+	<reading datetime="07/12/2022 16:40" rate="91" result="PAF" />
+	<reading datetime="07/12/2022 16:41" rate="82" result="PAF" />
+	<reading datetime="09/12/2022 11:22" rate="82" result="PAF" systolic="99" diastolic="63" />
+	<reading datetime="10/12/2022 08:10" rate="87" result="PAF" systolic="95" diastolic="55" />
+	<reading datetime="21/12/2022 15:16" rate="109" result="PAF" systolic="94" diastolic="62" />
+	<reading datetime="22/12/2022 10:33" rate="83" result="PAF" systolic="103" diastolic="62" />
+	<reading datetime="23/12/2022 09:54" rate="88" result="PAF" systolic="97" diastolic="63" />
+	<reading datetime="27/12/2022 09:45" rate="89" result="PAF" systolic="109" diastolic="72" />
+	<reading datetime="29/12/2022 13:26" rate="90" result="PAF" systolic="95" diastolic="61" />
+	<reading datetime="31/12/2022 11:55" rate="88" result="PAF" systolic="96" diastolic="68" />
+	<reading datetime="04/01/2023 07:58" rate="88" result="PAF" systolic="101" diastolic="66" />
+	<reading datetime="09/01/2023 09:54" rate="83" result="PAF" systolic="93" diastolic="60" />
+	<reading datetime="11/01/2023 20:01" rate="101" result="PAF" systolic="93" diastolic="60" />
+	<reading datetime="23/01/2023 20:47" rate="85" result="PAF" systolic="105" diastolic="66" />
+	<reading datetime="24/01/2023 06:31" rate="81" result="PAF" systolic="107" diastolic="74" />
+	<reading datetime="24/01/2023 15:12" rate="56" result="NSR" systolic="88" diastolic="55" />
+	<reading datetime="24/01/2023 20:31" rate="65" result="NSR" systolic="95" diastolic="59" />
+	<reading datetime="24/01/2023 22:51" rate="66" result="NSR" systolic="97" diastolic="61" />
+	<reading datetime="25/01/2023 08:50" rate="63" result="NSR" systolic="102" diastolic="65" />
+	<reading datetime="25/01/2023 20:02" rate="60" result="NSR" systolic="102" diastolic="63" />
+	<reading datetime="26/01/2023 09:52" rate="58" result="NSR" systolic="105" diastolic="59" />
+	<reading datetime="26/01/2023 20:44" rate="66" result="NSR" systolic="97" diastolic="58" />
+	<reading datetime="27/01/2023 09:20" rate="54" result="NSR" systolic="105" diastolic="66" />
+	<reading datetime="27/01/2023 20:30" rate="59" result="NSR" systolic="101" diastolic="56" />
+	<reading datetime="28/01/2023 09:10" rate="52" result="NSR" systolic="107" diastolic="67" />
+	<reading datetime="28/01/2023 18:58" rate="96" result="PAF" systolic="96" diastolic="68" />
+	<reading datetime="29/01/2023 11:47" rate="85" result="PAF" systolic="93" diastolic="66" />
 	
-	<medication name="Low dose Asprin." start="12/06/2022" end="26/09/2022" />
-	<medication name="Tensig-atenolol 25mg (half tablet)." start="23/09/2022" end="05/10/2022" />
-	<medication name="Low dose Asprin (twice daily)." start="27/09/2022" end="28/09/2022" />
-	<medication name="Eliquis-apixaban 20mg (2 in AM, 2 in PM)." start="28/09/2022" end="04/10/2022" />
-	<medication name="Eliquis-apixaban 10mg (1 in AM, 1 in PM)." start="05/10/2022" end="" />
-	<medication name="Tensig-atenolol 50mg (0.5 in AM, 0.5 in PM)." start="06/10/2022" end="" />
+	<medication name="asprin 100mg (1 in AM). Total: 100mg" start="12/06/2022" end="26/09/2022" />
+	<medication name="atenolol 25mg (half tablet). Total: 25mg" start="23/09/2022" end="05/10/2022" />
+	<medication name="asprin 100mg (1 in AM, 1 in PM). Total: 200mg" start="27/09/2022" end="28/09/2022" />
+	<medication name="apixaban 5mg (2 in AM, 2 in PM). Total: 20mg" start="28/09/2022" end="04/10/2022" />
+	<medication name="apixaban 5mg (1 in AM, 1 in PM). Total: 10mg" start="05/10/2022" end="" />
+	<medication name="atenolol 50mg (0.5 in AM, 0.5 in PM). Total: 50mg" start="06/10/2022" end="02/11/2022" />
+	<medication name="sotalol 80mg (1 in AM, 1 in PM). Total: 160mg" start="02/11/2022" end="25/01/2023" />
+	<medication name="sotalol 40/80mg (0.5 in AM, 1 in PM). Total: 120mg" start="26/01/2023" end="28/01/2023" />
+	<medication name="sotalol 80mg (1 in AM, 1 in PM). Total: 160mg" start="29/01/2023" end="" />
 	
 	<symptom name="Left leg calf pain. Possible DVT." result="Confirmed DVT, 28/9/2022. 10-15cm." start="26/09/2022" end="30/09/2022" />
-	<symptom name="While taking short walks (3-6kms), feeling lethargic, short of breathe." start="30/09/2022" end="" />
+	<symptom name="While taking short walks (3-6kms), feeling fatigued, short of breathe." start="30/09/2022" end="" />
 	<symptom name="Light headed after bending down." start="30/09/2022" end="" />
+	<symptom name="Light headed while driving. Low HR manually detected. Stopped to rest and recover. " start="01/12/2022" end="01/12/2022" />
+	<symptom name="Light headed while driving. Maybe pressure imbalance." start="09/12/2022" end="09/12/2022" />
+	
+	<timeline>
+		<background>
+			<desc>My name is Robert Wadhams. My wife's name is Molly Wadhams.</desc>
+			<desc>We have recently retired (June, 2019), sold our property in Brisbane and now live fulltime on the road as grey nomads. We are planning on driving a car and caravan all over Australia for as long as we can do it.</desc>
+			<desc>This lifestyle is wonderful and refreshing, but it does present issues when medical attention is required as we are not always in one location for an extended period of time. However, we will always make the necessary arrangements when seeking medical treatment.</desc>
+		</background>
+		<event eventDt="15/04/2022">
+			<desc>Arrived in America for overseas holiday. While dealing with jetlag and resting, I felt my heart rate was irregular. Confirmed by my wife.</desc>
+		</event>
+		<event eventDt="19/04/2022">
+			<desc>While visiting my uncle-in-law who is a retired cardiologist, he confirmed that I was in Atrial Fibrillation. He used a device and an app made by Kardia. He also suggested taking a low dose asprin daily as a precaution against developing a blood clot which may cause a stroke or heart failure. He also recommended that I seek medical advice ASAP.</desc>
+			<desc>We later purchased the Karia device and installed the app for our own use.</desc>
+		</event>
+		<event startDt="22/04/2022" endDt="04/06/2022">
+			<desc>During my 6-7 weeks in America, I periodically monitored my ECGs (via Kardia). I was fluctuating into and out of AF during this time. While lying down at bedtime, I could tell whether I was in or out of AF.</desc>
+		</event>
+		<event eventDt="06/06/2022">
+			<desc>Returned to Australia.</desc>
+			<desc>Appointment with Dr. Caroline South (GP in Brisbane). Discussed my heart condition while I was overseas. Coincidentally, I was experiencing AF during this appointment.</desc>
+			<desc>Dr. South suggested an immediate 24hr holter monitor, especially since I was in AF. See results on document labelled A.</desc>
+			<desc>Dr. South ordered an EchoCardioGraphy. See results (8/6/2022) on document labelled B.</desc>
+			<desc>Dr. South referred me to Cardiology in the QLD Health System.</desc>
+			<desc>Dr. South prescribed atenolol (25mg, half tablet daily) as a "pill-in-a-pocket" response if I stayed in AF for a prelonged period.</desc>
+			<desc>I continued with low dose Asprin as a precaution against possible blood clotting.</desc>
+		</event>
+		<event eventDt="12/06/2022">
+			<desc>I started recording daily ECG results. If I went into AF, I monitored more often during that time.</desc>
+			<desc>Over the next 95 days, I maintained normal sinus rhythm except for two 3-day periods of AF. However, while I was briefly in AF, my HR was often in the 160-170 range. During these 95 days, I continued with low dose Asprin and never resorted to the atenolol ("pill-in-a-pocket").</desc>
+		</event>
+		<event eventDt="20/06/2022">
+			<desc>Appointment for Flu shot and a 12-lead ECG. Coincidentally, I was again experiencing AF at this time. See results on document labelled C.</desc>
+		</event>
+		<event eventDt="14/09/2022">
+			<desc>Phone appointment with Dr. Gerald Connors (Cardiology, PA Hospital, Metro South, Brisbane). See appointment notes on document labelled D.</desc>
+		</event>
+		<event startDt="14/09/2022" endDt="">
+			<desc>Entered what has now become a persistent AF episode.</desc>
+		</event>
+		<event startDt="23/09/2022" endDt="02/11/2022">
+			<desc>Started taking atenolol ("pill-in-a-pocket") for rate control.</desc>
+		</event>
+		<event eventDt="26/09/2022">
+			<desc>Persistent pain in left calf. Felt like a muscle strain, but hadn't done any extensive exercise. If anything, I had become more stationary and sedentary due to the rainy weather that now confined me to our caravan.</desc>
+		</event>
+		<event eventDt="28/09/2022">
+			<desc>Presented to Emergency Department, Noarlunga Centre, SA. See Discharge Letter labelled E.</desc>
+			<desc>Ultrasound revealed DVT (10-15cm). See results on document labelled F.</desc>
+			<desc>Prescribed 7-days of double dose apixaban, followed up with single dose apixaban which I'm still currently taking.</desc>
+			<desc>Calf pain disappeared after 2-3 days.</desc>
+			<desc>The doctors were planning on administering intravenous K and Mg. Unfortunately, I had a vasovagal response to the Potassium. Aborted.</desc>
+		</event>
+		<event startDt="28/09/2022" endDt="">
+			<desc>Medication: started apixaban as a blood thinner. Stopped low dose Asprin.</desc>
+		</event>
+		<event eventDt="05/10/2022">
+			<desc>Dr. Caroline South (GP in Brisbane) wrote a referral to Geelong Cardiology so they could begin evaluating me for cardioversion. Nothing progressed in Geelong. See results on document labelled G.</desc>
+		</event>
+		<event eventDt="02/11/2022">
+			<desc>Flew MEL to BNE for appointment with Dr. Gerald Connors (Cardiology, PA Hospital, Metro South, Brisbane). See appointment notes on document labelled H.</desc>
+			<desc>Prescribed sotalol as an alternative to atenolol.</desc>
+			<desc>Recommended cardioversion.</desc>
+		</event>
+		<event startDt="02/11/2022" endDt="">
+			<desc>Medication: started sotalol for rate control (beta blocker). Stopped atenolol.</desc>
+		</event>
+		<event eventDt="01/12/2022">
+			<desc>While driving, I felt light headed so I pulled over to taking some water and rest. My wife detected a lower than normal HR (~60).</desc>
+		</event>
+		<event eventDt="07/12/2022">
+			<desc>Presented to Emergency Department, Launceston General Hospital, TAS. See Discharge Letter labelled J.</desc>
+			<desc>Concerned about low blood pressure, light headedness, dizziness and fatigue.</desc>
+			<desc>Chest X-ray.</desc>
+			<desc>CT Brain &amp; CT Angiogram of the neck and circle of willis.</desc>
+			<desc>Review by Cardiology &amp; Physio departments</desc>
+			<desc>No changes to current medications (apixaban &amp; sotalol)</desc>
+		</event>
+		<event eventDt="27/12/2022">
+			<desc>I forgot to take my overnight medication. I used this opportunity to measure my morning BP which revealed 109/72. Not great, but better than usual the readings.</desc>
+		</event>
+		<event eventDt="04/01/2023">
+			<desc>Cardiology appointment at LGH</desc>
+		</event>
+		<event eventDt="24/01/2023">
+			<desc>Cardio Version procedure at LGH at 7:30am. Normal sinus rhythm on first attempt. Observed low blood pressure. BP improved after food and liquids. Discharged around 3pm.</desc>
+		</event>
+		<event eventDt="28/01/2023">
+			<desc>Reverted back into atrial fibrillation around 6pm while sitting around firepit. Took evening medication immediately. Daily sequence: Drove to Longford, Cressy, Poatina and Arthur&quot;s Lake (lunch). Collected firewood from roadside. Cut &amp; chopped firewood - loaded roof top cage.</desc>
+		</event>
+		<!--
+		<event eventDt="dd/mm/2023">
+			<desc></desc>
+		</event>
+		<event startDt="dd/mm/2023" endDt="dd/mm/2023">
+			<desc></desc>
+		</event>
+		-->
+	</timeline>
 </kardia>
