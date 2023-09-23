@@ -38,6 +38,7 @@ class KardiaApp {
 
 	static main(args) {
 		println 'KardiaApp started...'
+		println ''
 
 		KardiaApp app = new KardiaApp()
 		app.execute()
