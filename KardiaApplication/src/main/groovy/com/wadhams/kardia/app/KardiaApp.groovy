@@ -37,12 +37,12 @@ class KardiaApp {
 	ReportingValues reportingValues	
 
 	static main(args) {
-		logger.info 'KardiaApp started...'
+		println 'KardiaApp started...'
 
 		KardiaApp app = new KardiaApp()
 		app.execute()
 		
-		logger.info 'KardiaApp ended.'
+		println 'KardiaApp ended.'
 	}
 	
 	def execute() {
