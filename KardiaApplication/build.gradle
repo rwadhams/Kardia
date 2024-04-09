@@ -9,6 +9,7 @@ plugins {
 }
 
 repositories {
+	mavenLocal()
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
@@ -24,6 +25,9 @@ dependencies {
 	// Use the awesome Spock testing and specification framework
 	testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
 }
+
+sourceCompatibility=18
+targetCompatibility=18
 
 application {
     // Define the main class for the application.
